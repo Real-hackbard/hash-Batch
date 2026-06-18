@@ -101,5 +101,112 @@ Normally, for encryption, dpcpcrypt expects keys that are hashed when they are s
 
 You can pass a plain string key by using [.Init](https://is.muni.cz/th/51468/fi_b/priloha/DCPcrypt/Docs/Ciphers.html#Init), e.g. like this:
 
+```pascal
+var s:string;
+begin
+  s:='1234567890ABCDEF1234567890ABCDEF';
+  DCP_3des1.Init(s[1],length(s)*8,nil);
+```
 
+# Lazarus example
+
+```pascal
+unit Unit1;
+ 
+{$mode objfpc}{$H+}
+ 
+interface
+ 
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  DCPrc4, DCPsha1;
+ 
+type
+ 
+  { TForm1 }
+ 
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    DCP_rc4_1: TDCP_rc4;
+    DCP_sha1_1: TDCP_sha1;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+ 
+var
+  Form1: TForm1;
+  KeyStr: string;
+ 
+implementation
+ 
+{$R *.lfm}
+ 
+{ TForm1 }
+ 
+procedure TForm1.Button1Click(Sender: TObject);
+var
+   Cipher: TDCP_rc4;
+   Source, Dest: TFileStream;
+ begin
+   //if InputQuery('Passphrase','Enter passphrase',KeyStr) then  // get the passphrase
+   begin
+     try
+       Source:= TFileStream.Create(Edit1.Text,fmOpenRead);   // Edit1.Text, PATH SOURCE OF FILE
+       Dest:= TFileStream.Create(Edit2.Text,fmCreate);       // Edit2.Text, PATH DESTINATION OF FILE
+       Cipher:= TDCP_rc4.Create(Self);
+       Cipher.InitStr(KeyStr,TDCP_sha1);              // initialize the cipher with a hash of the passphrase
+       Cipher.EncryptStream(Source,Dest,Source.Size); // encrypt the contents of the file
+       Cipher.Burn;
+       Cipher.Free;
+       Dest.Free;
+       Source.Free;
+       MessageDlg('File encrypted',mtInformation,[mbOK],0);
+     except
+       MessageDlg('File IO error',mtError,[mbOK],0);
+     end;
+   end;
+ end;
+ 
+procedure TForm1.Button2Click(Sender: TObject);
+var
+    Cipher: TDCP_rc4;
+    //KeyStr: string;
+    Source, Dest: TFileStream;
+  begin
+    //if InputQuery('Passphrase','Enter passphrase',KeyStr) then  // get the passphrase
+    begin
+      try
+        Source:= TFileStream.Create(Edit1.Text,fmOpenRead);   // Edit1.Text, PATH SOURCE OF FILE
+        Dest:= TFileStream.Create(Edit2.Text,fmCreate);       // Edit2.Text, PATH DESTINATION OF FILE
+        Cipher:= TDCP_rc4.Create(Self);
+        Cipher.InitStr(KeyStr,TDCP_sha1);              // initialize the cipher with a hash of the passphrase
+        Cipher.DecryptStream(Source,Dest,Source.Size); // decrypt the contents of the file
+        Cipher.Burn;
+        Cipher.Free;
+        Dest.Free;
+        Source.Free;
+        MessageDlg('File decrypted',mtInformation,[mbOK],0);
+      except
+        MessageDlg('File IO error',mtError,[mbOK],0);
+      end;
+    end;
+  end;
+ 
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  KeyStr         := 'casa777';     // my password
+end;
+ 
+end.
+```
 
