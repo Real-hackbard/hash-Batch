@@ -68,4 +68,27 @@ Get-FileHash "C:\Pfad\zur\datei.iso" -Algorithm SHA256
 sha256sum /pfad/zur/datei.iso
 ```
 
+</br>
+
+# Installation
+Since the v2.0.4 release, DCPCrypt is split into two packages:
+
+* ```dcpcrypt.lpk```
+    * This is a run-time only package and only contains the core non-gui code. You can use the package for console applications or other non-LCL projects (eg: fpGUI or MSEgui based projects).
+
+* ```dcpcrypt_laz.lpk```
+    *This is the design time package to register the various components with the Lazarus IDE component palette.
+To use DCPCrypt with Lazarus IDE for the first time:
+
+In 'Package > Open Package File', open dcpcrypt.lpk and click Compile
+If you want to register the DCPCrypt components with the Lazarus IDE component palette, open the dcpcrypt_laz.lpk and click Compile and then Install. Lazarus IDE will now rebuild itself.
+Restart Lazarus IDE and you are ready to use DCPCrypt.
+
+* Usage
+Please note that an appreciation of the basic principles of encryption/decryption and key management is needed to ensure the correct usage of the ciphers implemented within this package. A good introduction on this subject is provided by Bruce Schneier's "Applied Cryptography" (ISBN: 0-471-11709-9) also see the NIST publication SP800-38A for information on the block cipher chaining modes.
+
+Ciphers - the basic building block of DCPcrypt, the TDCP_cipher component.
+Block Ciphers - the base of all block ciphers, the TDCP_blockcipher component.
+Hashes - the base of all hash algorithms, the TDCP_hash component.
+See included documentation.
 
