@@ -96,7 +96,10 @@ Block Ciphers - the base of all block ciphers, the TDCP_blockcipher component.
 Hashes - the base of all hash algorithms, the TDCP_hash component.
 See included documentation.
 
+' Encrypting example using plain key
+Normally, for encryption, dpcpcrypt expects keys that are hashed when they are supplied through .InitStr.
 
+You can pass a plain string key by using [.Init](https://is.muni.cz/th/51468/fi_b/priloha/DCPcrypt/Docs/Ciphers.html#Init), e.g. like this:
 
 
 
