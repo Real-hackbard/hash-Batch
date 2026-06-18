@@ -36,15 +36,15 @@ This software is OSI Certified Open Source Software. OSI Certified is a certific
 | Name | Patents | Digest Size  | 
 | :-----------: | :-----------: | :-----------: |
 | [Haval](https://de.wikipedia.org/wiki/HAVAL)     | None     | 128, 160, 192, 224, 256 bits     |
-| MD4     | None     | 128 bits     |
-| MD5     | None     | 128 bits     |
-| RipeMD-128     | None     | 128 bits     |
-| RipeMD-160     | None     | 160 bits     |
-| SHA-1     | None     | 160 bits     |
-| SHA-256     | None     | 256 bits     |
-| SHA-384     | None     | 384 bits     |
-| SHA-512     | None     | 512 bits     |
-| Tiger     | None     | 192 bits     |
+| [MD4](https://en.wikipedia.org/wiki/MD4)     | None     | 128 bits     |
+| [MD5](https://en.wikipedia.org/wiki/MD5)     | None     | 128 bits     |
+| [RipeMD-128](https://en.wikipedia.org/wiki/RIPEMD)     | None     | 128 bits     |
+| [RipeMD-160](https://en.wikipedia.org/wiki/RIPEMD)     | None     | 160 bits     |
+| [SHA-1](https://en.wikipedia.org/wiki/SHA-1)     | None     | 160 bits     |
+| [SHA-256](https://de.wikipedia.org/wiki/SHA-2)     | None     | 256 bits     |
+| [SHA-384](https://de.wikipedia.org/wiki/SHA-2)     | None     | 384 bits     |
+| [SHA-512](https://de.wikipedia.org/wiki/SHA-2)     | None     | 512 bits     |
+| [Tiger](https://en.wikipedia.org/wiki/Tiger_(hash_function))     | None     | 192 bits     |
 
 
 </br>
