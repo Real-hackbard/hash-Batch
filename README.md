@@ -73,10 +73,10 @@ sha256sum /pfad/zur/datei.iso
 # Installation
 Since the v2.0.4 release, DCPCrypt is split into two packages:
 
-* ```dcpcrypt.lpk```
+* ```dcpcrypt.lpk```  
     * This is a run-time only package and only contains the core non-gui code. You can use the package for console applications or other non-LCL projects (eg: fpGUI or MSEgui based projects).
 
-* ```dcpcrypt_laz.lpk```
+* ```dcpcrypt_laz.lpk```  
     *This is the design time package to register the various components with the Lazarus IDE component palette.
 To use DCPCrypt with Lazarus IDE for the first time:
 
