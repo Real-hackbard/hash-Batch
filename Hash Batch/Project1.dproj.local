@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.024,D:\Incoming\[.WORK]\DCPCrypt-master\demos\FileHash\Unit1.pas=D:\Incoming\[.WORK]\DCPCrypt-master\demos\FileHash\uMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.024,D:\Incoming\[.WORK]\DCPCrypt-master\demos\FileHash\Unit1.dfm=D:\Incoming\[.WORK]\DCPCrypt-master\demos\FileHash\uMain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.576,D:\Incoming\[.WORK]\DCPCrypt-master\demos\FileHash\FileHash.dproj=D:\Incoming\[.WORK]\DCPCrypt-master\demos\FileHash\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
