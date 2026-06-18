@@ -33,9 +33,18 @@ This software is OSI Certified Open Source Software. OSI Certified is a certific
 
 </br>
 
-| Überschrift 1 | Überschrift 2 | Überschrift 3 |
+| Name | Patents | Digest Size  | 
 | :-----------: | :-----------: | :-----------: |
-| Zelle 1,1     | Zelle 1,2     | Zelle 1,3     |
+| [Haval](https://de.wikipedia.org/wiki/HAVAL)     | None     | 128, 160, 192, 224, 256 bits     |
+| MD4     | None     | 128 bits     |
+| MD5     | None     | 128 bits     |
+| RipeMD-128     | None     | 128 bits     |
+| RipeMD-160     | None     | 160 bits     |
+| SHA-1     | None     | 160 bits     |
+| SHA-256     | None     | 256 bits     |
+| SHA-384     | None     | 384 bits     |
+| SHA-512     | None     | 512 bits     |
+| Tiger     | None     | 192 bits     |
 
 
 </br>
