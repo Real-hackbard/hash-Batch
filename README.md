@@ -49,6 +49,23 @@ This software is OSI Certified Open Source Software. OSI Certified is a certific
 
 </br>
 
+# Practical example: How to check a file hash
+On Windows and Linux, you can display a file's hash directly in the terminal to compare it with the official value provided by the manufacturer (e.g., for an Ubuntu ISO).
 
+</br>
+
+### Windows (PowerShell):
+
+```
+Get-FileHash "C:\Pfad\zur\datei.iso" -Algorithm SHA256
+```
+
+</br>
+
+### Linux / macOS (Terminal):
+
+```
+sha256sum /pfad/zur/datei.iso
+```
 
 
