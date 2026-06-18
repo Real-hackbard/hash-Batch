@@ -204,7 +204,7 @@ var
  
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  KeyStr         := 'casa777';     // my password
+  KeyStr         := 'abc123';     // my password
 end;
  
 end.
