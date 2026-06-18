@@ -92,3 +92,9 @@ Block Ciphers - the base of all block ciphers, the TDCP_blockcipher component.
 Hashes - the base of all hash algorithms, the TDCP_hash component.
 See included documentation.
 
+### Screenshots:
+<img width="783" height="71" alt="Dcp1" src="https://github.com/user-attachments/assets/ec714725-32f7-40e7-84c6-784d86d11bcb" />  
+<img width="779" height="65" alt="Dcp2" src="https://github.com/user-attachments/assets/240f3a86-b0e5-457e-9e5f-26735139fc54" />
+
+
+
