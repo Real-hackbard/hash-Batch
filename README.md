@@ -88,7 +88,7 @@ To use DCPCrypt with Lazarus IDE for the first time:
 <img width="783" height="71" alt="Dcp1" src="https://github.com/user-attachments/assets/ec714725-32f7-40e7-84c6-784d86d11bcb" />  
 <img width="779" height="65" alt="Dcp2" src="https://github.com/user-attachments/assets/240f3a86-b0e5-457e-9e5f-26735139fc54" />
 
-### Usage
+# Usage
 Please note that an appreciation of the basic principles of encryption/decryption and key management is needed to ensure the correct usage of the ciphers implemented within this package. A good introduction on this subject is provided by Bruce Schneier's "Applied Cryptography" (ISBN: 0-471-11709-9) also see the NIST publication SP800-38A for information on the block cipher chaining modes.
 
 Ciphers - the basic building block of DCPcrypt, the TDCP_cipher component.
